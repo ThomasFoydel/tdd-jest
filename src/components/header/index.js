@@ -4,11 +4,11 @@ import Logo from 'img/logo.png';
 
 export default function Header() {
   return (
-    <header>
+    <header data-test='headerComponent'>
       <div className='wrap'>
         <div className='logo'>
           <span>CARROT</span>
-          <img className='' alt='Logo' src={Logo} />
+          <img data-test='logoImg' alt='Logo' src={Logo} />
           <span>KING</span>
         </div>
       </div>
