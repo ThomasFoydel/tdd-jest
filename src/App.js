@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Header from 'components/header/index';
 import Headline from 'components/headline/index';
 import './app.scss';
+
+const LazyComp = React.lazy(() => import('components/lazyComp'));
 
 const tempArr = [
   {
@@ -20,6 +22,10 @@ function App() {
       <section className='main'>
         <Headline header='title' desc='eat more carrots' tempArray={tempArr} />
       </section>
+
+      <Suspense fallback={<div>Loading lazily...</div>}>
+        <LazyComp />
+      </Suspense>
     </div>
   );
 }
