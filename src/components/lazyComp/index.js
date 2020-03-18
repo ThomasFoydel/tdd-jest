@@ -1,5 +1,7 @@
 import React from 'react';
 
-export const LazyComp = () => {
+const LazyComp = () => {
   return <div>lazy load me</div>;
 };
+
+export default LazyComp;
