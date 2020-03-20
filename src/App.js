@@ -23,7 +23,11 @@ function App() {
         <Headline header='title' desc='eat more carrots' tempArray={tempArr} />
       </section>
 
-      <Suspense fallback={<div>Loading lazily...</div>}>
+      <Suspense
+        fallback={
+          <img src='https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca_w200.gif' />
+        }
+      >
         <LazyComp />
       </Suspense>
     </div>
